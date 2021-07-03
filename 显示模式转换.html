@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 把行内元素设置为块元素 */
+        span {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 块级元素转换行内 */
+        div {
+            display: inline;
+            width: 200px;
+            height: 2000px;
+            background-color: aqua;
+        }
+        
+        /* 行内块 */
+        a {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+<body>
+    <span>hangnei</span>
+    <span>hangnei</span>
+    <div>kuai</div>
+    <div>kuai</div>
+    <a href="#">链接</a><a href="#">链接</a>
+</body>
+
+</html>

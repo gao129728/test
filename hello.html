@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- [v-cloak]编译完成之前不会渲染 -->
+        <div v-cloak>{{msg}}</div>
+        <!-- [v-once]关闭数据相应 -->
+        <div v-once>{{msg2}}</div>
+        <div>
+            <!-- 双向数据绑定 -->
+            <input type="text" v-model='msg'>
+            <input type="text" v-model='msg2'>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript">
+        /*vue基本使用步骤
+        1、需要提供标签用于填充数据
+        2、引入vue.js文件
+        3、使用vue语法实现功能
+        4、把vue提供的数据填充到标签里面
+        */
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello Vue...',
+                msg2: 'nihaoa!'
+            }
+        });
+    </script>
+</body>
+
+</html>

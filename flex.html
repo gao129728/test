@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            height: 500px;
+            width: 700px;
+            background-color: pink;
+            /* 默认 X 为主轴 row */
+            /* flex-direction: row; */
+            /* 平分 */
+            /* justify-content: space-around; */
+            /* 两头贴边中间平分（重要） */
+            /* justify-content: space-between; */
+            /* 主轴居中 */
+            justify-content:center;
+            /* 侧轴居中 */
+            align-items: center;
+
+        }
+
+        span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+
+</html>

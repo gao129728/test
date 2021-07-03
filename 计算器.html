@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>简易计算器</h1>
+        <div>
+            <span>a:</span>
+            <span>
+                <input type="text" v-model='a'>
+            </span>
+        </div>
+        <div>
+            <span>b:</span>
+            <span>
+                <input type="text" v-model='b'>
+            </span>
+        </div>
+        <div>
+            <button v-on:click='handle'>+</button>
+            <button v-on:click='handle1'>-</button>
+            <button v-on:click='handle2'>*</button>
+            <button v-on:click='handle3'>/</button>
+        </div>
+        <div>
+            <span>res：</span>
+            <span v-text='result'></span>
+        </div>
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: '',
+                b: '',
+                result: ''
+            },
+            methods: {
+                handle: function () {
+                    this.result = parseInt(this.a) + parseInt(this.b);
+                },
+                handle1: function () {
+                    this.result = parseInt(this.a) - parseInt(this.b);
+                },
+                handle2: function () {
+                    this.result = parseInt(this.a) * parseInt(this.b);
+                },
+                handle3: function () {
+                    this.result = parseInt(this.a) / parseInt(this.b);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
